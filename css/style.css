@@ -1,3 +1,5 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 /*  global rules */
 *,
 *::after,
@@ -5,21 +7,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
   scroll-behavior: smooth;
 }
 body {
-  font-family: "IBM Plex Sans Arabic", sans-serif;
-  color: var(--main-font-color);
+  font-family: "Chakra Petch", sans-serif;
   list-style: none;
   line-height: 1.5;
 }
+body::selection {
+  background-color: var(--yellow);
+  color: var(--black);
+}
 /* colors */
 :root {
+  --black: #0b0e13;
+  --yellow: #cbfe1c;
+}
+/* ----------------------------------------------------------------- */
+/* background */
+.BG-black {
+  background-color: var(--black);
+}
+.BG-yellow {
+  background-color: var(--yellow);
+}
+/* font */
+.white {
+  color: white;
+}
+.yellow {
+  color: yellow;
 }
 /* ----------------------------------------------------------------- */
 /* tags */
 /* ----------------------------------------------------------------- */
-/* font */
+/* font size*/
 /* ----------------------------------------------------------------- */
-/* classes */
+/* font weight*/
+.w700 {
+  font-weight: 700;
+}
+/* ----------------------------------------------------------------- */
+/* sizing */
+.w-25px {
+  width: 25px;
+}
+/* ----------------------------------------------------------------- */
+/* ------------------------- header ------------------------------- */
+header {
+  padding-block: 5px;
+}
+/* navbar-toggler */
+button.navbar-toggler {
+  border: none;
+  color: var(--yellow);
+}
+button.navbar-toggler:hover i{
+  color: var(--yellow);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
