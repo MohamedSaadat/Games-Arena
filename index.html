@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <!-- logo -->
-          <div class="logo d-flex align-items-center gap-2">
+          <div class="logo d-flex align-items-center gap-2 me-5">
             <div class="icon d-flex align-items-center w-25px">
               <svg
                 class="svg-inline--fa fa-gamepad mr-2 yellow"
@@ -54,27 +54,83 @@
             <i class="fa-solid fa-bars fs-3 white"></i>
           </button>
 
+          <!-- links & button -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active yellow" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <button class="BG-yellow">
-              Search
-            </button>
+            <div
+              class="d-flex w-100 align-items-center justify-content-sm-between"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item me-4">
+                  <a href="#Home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a href="#OURGAMES" class="nav-link">OUR GAMES</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a href="#WhatWeDo" class="nav-link">What We Do</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a href="#OurTeam" class="nav-link">Our Team</a>
+                </li>
+                <li class="nav-item me-4">
+                  <a href="#ContactUs" class="nav-link">Contact Us</a>
+                </li>
+              </ul>
+              <div class="d-flex align-items-center">
+                <div class="bell fs-5 me-3 white">
+                  <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="message fs-5 me-3 white">
+                  <i class="fa-regular fa-message"></i>
+                </div>
+                <button class="btn BG-yellow">Sign In</button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <!-- main -->
+    <main>
+      <div class="overlay d-flex align-items-center justify-content-center">
+        <div class="container d-grid align-items-center gap-5">
+          <!-- content -->
+          <div class="content d-flex flex-column gap-3 pe-2">
+            <h1>
+              THE ULTIMATE
+              <span class="yellow">GAMING</span>
+              EXPERIENCE
+            </h1>
+            <p>
+              Join millions of gamers worldwide in the most competitive eSports
+              tournaments. Experience next-level gaming with cutting-edge
+              technology and endless possibilities.
+            </p>
+            <div class="d-flex align-items-center w-75 gap-3">
+              <button class="btn w-100 py-3">Start Gaming Now</button>
+              <button class="btn w-100 py-3">Watch Tournaments</button>
+            </div>
+          </div>
+
+          <!-- image -->
+          <div class="image">
+            <div class="img"></div>
+            <div class="position-absolute d-flex align-items-center gap-3 rounded p-4 BG-black">
+              <div class="icon fs-5">
+                <i class="fa-solid fa-trophy yellow"></i>
+              </div>
+              <div class="text d-flex flex-column">
+                <span class="f-12 gray">Active Players</span>
+                <span class="fs-5 w700 white">2.5M+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- -------------------------------------------------------------- -->
-    <!-- bootstrap js -->
+    <!-- bootstrap js -->`
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
