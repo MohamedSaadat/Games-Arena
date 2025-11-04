@@ -52,8 +52,64 @@ h1 {
   font-weight: 700;
   color: white;
 }
+h2 {
+  font-family: "Days One", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
 p {
   color: #d1d5db;
+}
+section {
+  padding-block: 48px;
+  background-color: var(--black);
+}
+section .container {
+  padding-block: 48px;
+}
+img{
+  width: 100%;
+}
+/* ----------------------------------------------------------------- */
+/* classes */
+.main-title {
+  text-align: center;
+}
+.main-title p {
+  position: relative;
+  color: var(--yellow);
+  font-weight: 700;
+}
+.main-title p::after {
+  content: "";
+  position: absolute;
+  left: 515px;
+  top: 10px;
+  height: 3px;
+  width: 70px;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 14, 19, 1) 0%,
+    rgba(203, 254, 28, 1) 70%
+  );
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+.main-title p::before {
+  content: "";
+  position: absolute;
+  right: 515px;
+  top: 10px;
+  height: 3px;
+  width: 70px;
+  background: linear-gradient(
+    -90deg,
+    rgba(11, 14, 19, 1) 0%,
+    rgba(203, 254, 28, 1) 70%
+  );
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 /* ----------------------------------------------------------------- */
 /* font size*/
@@ -180,4 +236,18 @@ main .image div[class^="position-absolute"] {
   box-shadow: 0 0 1px 1px #1e2939;
   bottom: -30px;
   left: -30px;
+}
+/* ----------------------------------------------------------------- */
+/* ------------------------- OUR GAMES ----------------------------- */
+.OurGames .card-items {
+  grid-template-columns: repeat(12, 1fr);
+}
+.OurGames .card-items .card-item {
+  grid-column: span 4;
+  height: 300px;
+  /* border: 2px solid var(--yellow); */
+}
+/* category */
+.OurGames .category{
+
 }
