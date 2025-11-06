@@ -396,8 +396,29 @@ main .image div[class^="position-absolute"] {
 }
 /* ----------------------------------------------------------------- */
 /* ------------------------- animation ----------------------------- */
-.animation .animationShadow {
-  /* height: 50px; */
-  background-color: transparent;
-  box-shadow: 0 0 100px 40px var(--yellow);
+.animation img {
+  width: 75px;
+}
+/* right to left */
+.animation .rightToLeft .group-1 {
+  animation: spin-1 20s infinite linear;
+}
+.animation .rightToLeft .group-2 {
+  animation: spin-2 20s infinite linear;
+}
+@keyframes spin-1 {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+@keyframes spin-2 {
+  0% {
+    transform: translate(100);
+  }
+  100% {
+    transform: translate(-100%);
+  }
 }
