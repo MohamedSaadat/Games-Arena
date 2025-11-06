@@ -16,6 +16,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   list-style: none;
   line-height: 1.5;
+  background-color: var(--black);
 }
 body::selection {
   background-color: var(--yellow);
@@ -37,6 +38,9 @@ body::selection {
 }
 .BG-yellow {
   background-color: var(--yellow);
+}
+.BG-gray {
+  background-color: #1e2939;
 }
 /* font color */
 .white {
@@ -65,6 +69,9 @@ h2 {
   font-weight: 700;
   color: white;
 }
+h4 {
+  font-family: "Days One", sans-serif;
+}
 p {
   color: #d1d5db;
 }
@@ -91,32 +98,32 @@ img {
 .main-title p::after {
   content: "";
   position: absolute;
-  left: 515px;
+  left: 39%;
   top: 10px;
-  height: 3px;
+  height: 2px;
   width: 70px;
   background: linear-gradient(
     90deg,
     rgba(11, 14, 19, 1) 0%,
-    rgba(203, 254, 28, 1) 70%
+    rgba(203, 254, 28, 1) 100%
   );
-  border-top-left-radius: 10%;
-  border-bottom-left-radius: 10%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
 .main-title p::before {
   content: "";
   position: absolute;
-  right: 515px;
+  right: 39%;
   top: 10px;
-  height: 3px;
+  height: 2px;
   width: 70px;
   background: linear-gradient(
     -90deg,
     rgba(11, 14, 19, 1) 0%,
-    rgba(203, 254, 28, 1) 70%
+    rgba(203, 254, 28, 1) 100%
   );
-  border-top-right-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 /* ----------------------------------------------------------------- */
 /* font size*/
@@ -324,4 +331,73 @@ main .image div[class^="position-absolute"] {
 .OurGames button:hover {
   background-color: var(--yellow);
   color: var(--black);
+}
+/* ----------------------------------------------------------------- */
+/* ------------------------- What We Do ----------------------------- */
+/* card items */
+.WhatWeDo .card-items {
+  grid-template-columns: repeat(12, 1fr);
+}
+.WhatWeDo .card-items .card-item {
+  background-color: #1a1a1a;
+  padding-block: 70px;
+  border: 2px solid #303a4a;
+  cursor: pointer;
+  grid-column: span 3;
+}
+.WhatWeDo .card-items .card-item-img {
+  cursor: pointer;
+  grid-column: span 3;
+}
+.WhatWeDo .card-items .card-item,
+.WhatWeDo .card-items .card-item .icon,
+.WhatWeDo .card-items .card-item .icon .fa-display,
+.WhatWeDo .card-items .card-item .fa-sort-up,
+.WhatWeDo .card-items .card-item .fa-sort-down {
+  transition: 0.3s ease-in-out;
+}
+.WhatWeDo .card-items .card-item .icon {
+  width: 64px;
+  height: 64px;
+}
+.WhatWeDo .card-items .card-item .fa-sort-up {
+  top: -25px;
+  left: -30px;
+}
+.WhatWeDo .card-items .card-item .fa-sort-down {
+  bottom: -25px;
+  right: -30px;
+}
+.WhatWeDo .card-items .card-item:hover {
+  border: 2px solid var(--yellow);
+}
+.WhatWeDo .card-items .card-item:hover .icon {
+  background-color: var(--yellow);
+}
+.WhatWeDo .card-items .card-item:hover .icon i {
+  color: var(--black);
+}
+.WhatWeDo .card-items .card-item:hover .fa-sort-up {
+  top: 8px;
+  left: 3px;
+}
+.WhatWeDo .card-items .card-item:hover .fa-sort-down {
+  bottom: 8px;
+  right: 3px;
+}
+.WhatWeDo .line {
+  height: 2px;
+  background: radial-gradient(
+    circle,
+    rgba(203, 254, 28, 1) 43%,
+    rgba(11, 14, 19, 1) 100%
+  );
+  border-radius: 50%;
+}
+/* ----------------------------------------------------------------- */
+/* ------------------------- animation ----------------------------- */
+.animation .animationShadow {
+  /* height: 50px; */
+  background-color: transparent;
+  box-shadow: 0 0 100px 40px var(--yellow);
 }
