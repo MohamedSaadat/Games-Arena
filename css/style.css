@@ -305,30 +305,28 @@ main .image div[class^="position-absolute"] {
 }
 /* buttons */
 /* arrows */
-.OurGames .button .arrow-left,
-.OurGames .button .arrow-right {
-  width: 56px;
-  height: 56px;
+.OurGames .arrows button{
+  width: 70px;
+  height: 70px;
   border: 2px solid #303a4a;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-.OurGames .button .arrow-left:hover,
-.OurGames .button .arrow-right:hover {
+.OurGames .button .carousel-control-prev:hover,
+.OurGames .button .carousel-control-next:hover {
   border: 2px solid var(--yellow);
 }
 .OurGames .button .arrow-left:hover i,
 .OurGames .button .arrow-right:hover i {
   color: var(--yellow);
 }
-
 /* button */
 .OurGames button {
   padding: 16px 32px;
   border: 2px solid var(--yellow);
   transition: 0.2s ease-in-out;
 }
-.OurGames button:hover {
+.OurGames button[class*="BG-black"]:hover {
   background-color: var(--yellow);
   color: var(--black);
 }
