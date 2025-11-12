@@ -71,6 +71,7 @@ h2 {
 }
 h4 {
   font-family: "Days One", sans-serif;
+  font-size: 20px;
 }
 p,
 article {
@@ -85,8 +86,8 @@ footer {
 img {
   width: 100%;
 }
-/* ----------------------------------------------------------------- */
-/* classes */
+/* ----------------------------- classes ------------------------------ */
+/* --------------------------- main-title ------------------------------ */
 .main-title {
   text-align: center;
   margin-bottom: 64px;
@@ -126,6 +127,43 @@ img {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
+/* ------------------------- shiny button ----------------------------- */
+.shiny {
+  position: relative;
+  overflow: hidden;
+}
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -55%;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: 0.3s ease-in-out;
+}
+.shiny::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+.shiny:hover::after {
+  left: 105%;
+}
+.shiny:hover::before {
+  left: 0;
+}
 /* ----------------------------------------------------------------- */
 /* font size*/
 .f12 {
@@ -153,6 +191,9 @@ img {
 .w-25px {
   width: 25px;
 }
+.W-94 {
+  width: 94%;
+}
 /* ----------------------------------------------------------------- */
 /* ------------------------- header ------------------------------- */
 header {
@@ -162,15 +203,14 @@ header {
   padding-block: 5px;
   box-shadow: 0 1px 1px 0 #1e2939;
 }
+/* #1 */
+/* .navbar-nav {
+  scroll-target-group: auto;
+  a:target-current{
+    color: var(--yellow);
+  }
+} */
 /* links & button */
-header button.btn {
-  padding: 8px 24px;
-  font-weight: 700;
-}
-header button.btn:hover {
-  background-color: #a4ce1a;
-  border-color: #a4ce1a;
-}
 .bell,
 .message {
   cursor: pointer;
@@ -178,6 +218,13 @@ header button.btn:hover {
 .bell:hover,
 .message:hover {
   color: var(--yellow);
+}
+.navbar .collapse div[class^="d-flex"] {
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .collapse div[class^="d-flex"] div[class="d-flex"] {
+  align-items: center;
 }
 /* navbar-toggler */
 button.navbar-toggler {
@@ -199,12 +246,17 @@ button.navbar-toggler:hover i {
 .nav-item .nav-link.active {
   color: var(--yellow);
 }
+button.shiny {
+  padding: 8px 22px;
+  border: none;
+}
 /* ----------------------------------------------------------------- */
 /* ------------------------- main ------------------------------- */
 main {
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 main .overlay {
@@ -220,16 +272,16 @@ main .image {
   grid-column: span 6;
 }
 /* content */
+main .content div[class^="d-flex"] {
+  width: 75%;
+}
 main .content div[class^="d-flex"] .btn:first-child {
   border: 2px solid var(--yellow);
   background-color: var(--yellow);
   font-weight: 700;
 }
-main .content div[class^="d-flex"] .btn:first-child:hover {
-  border: 2px solid #a4ce1a;
-  background-color: #a4ce1a;
-}
 main .content div[class^="d-flex"] .btn:last-child {
+  background-color: transparent;
   border: 2px solid var(--yellow);
   color: var(--yellow);
   font-weight: 700;
@@ -269,6 +321,7 @@ main .image div[class^="position-absolute"] {
 /* card items */
 .OurGames .card-items {
   grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
 }
 .OurGames .card-items .card-item {
   border: 2px solid transparent;
@@ -281,6 +334,9 @@ main .image div[class^="position-absolute"] {
 .OurGames .card-items .card-item img,
 .OurGames .card-items .card-item .text {
   transition: 0.4s ease-in-out;
+}
+.OurGames .card-items .card-item .text {
+  padding: 0 0 16px 24px;
 }
 .OurGames .card-items .card-item:hover {
   border: 2px solid var(--yellow);
@@ -339,6 +395,7 @@ main .image div[class^="position-absolute"] {
 /* card items */
 .WhatWeDo .card-items {
   grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
 }
 .WhatWeDo .card-items .card-item {
   background-color: #1a1a1a;
@@ -459,13 +516,16 @@ main .image div[class^="position-absolute"] {
   }
 }
 /* ----------------------------------------------------------------- */
-/* ------------------------- gamers ----------------------------- */
+/* ------------------------- Our Team ----------------------------- */
 .gamers .row {
   grid-template-columns: repeat(12, 1fr);
 }
 .gamer {
   cursor: pointer;
   grid-column: 3 span;
+}
+.gamer img {
+  object-fit: cover;
 }
 .gamer .text {
   height: 120px;
@@ -515,11 +575,11 @@ main .image div[class^="position-absolute"] {
   width: 48px;
   height: 48px;
 }
-form{
+form {
   border-bottom: 1px solid #99a1af54;
 }
 .form-control,
-.form-select {
+.select {
   color: #f1f1f1;
   background-color: #364153;
   padding: 12px 16px;
@@ -532,7 +592,7 @@ form{
 .form-control::placeholder {
   color: #99a1af;
 }
-.form-select:focus,
+.select:focus,
 .form-control:focus {
   color: white;
   background-color: #364153;
@@ -557,6 +617,9 @@ textarea {
 }
 /* ----------------------------------------------------------------- */
 /* ------------------------- footer ----------------------------- */
+footer div[class="row d-grid gap-5"] {
+  grid-template-columns: repeat(4, 1fr);
+}
 footer i {
   cursor: pointer;
   transition: 0.2s ease-in-out;

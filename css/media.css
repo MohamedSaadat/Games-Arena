@@ -1,6 +1,240 @@
-@media (max-width: 1400px){}
-@media (max-width: 1200px){}
-@media (max-width: 992px){}
-@media (max-width: 768px){}
-@media (max-width: 576px){}
-@media (max-width: 480px){}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1280px) {
+  main .image {
+    width: 535px;
+  }
+  main .content div[class^="d-flex"] {
+    width: 81%;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 52px;
+  }
+  .main-title p::before {
+    right: 38%;
+  }
+  .main-title p::after {
+    left: 38%;
+  }
+}
+@media (max-width: 1200px) {
+  .OurGames .arrows button {
+    width: 67px;
+    height: 65px;
+  }
+  .animation img {
+    width: 90px;
+  }
+  .ContactUs .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  main .image {
+    width: 444px;
+  }
+  main .content div[class^="d-flex"] {
+    width: 95%;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 43px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .main-title p::before {
+    right: 36%;
+  }
+  .main-title p::after {
+    left: 36%;
+  }
+  .OurGames .card-items,
+  .WhatWeDo .card-items {
+    gap: 24px;
+  }
+  .OurGames .card-items p[class="f18 w700 black"] {
+    font-size: 16px;
+  }
+  .OurGames .card-items .card-item .text {
+    padding: 0 0 16px 16px;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 39px;
+  }
+  .gamer {
+    height: 320px;
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .navbar .collapse div[class^="d-flex"] {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar .collapse .navbar-nav {
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-block: 16px;
+    padding-block: 16px;
+  }
+  .navbar .collapse div[class^="d-flex"] div[class="d-flex"] {
+    align-items: start;
+    width: 100%;
+    gap: 16px;
+  }
+  .bell::after {
+    content: "Notifications";
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  .message::after {
+    content: "Messages";
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  header button.shiny {
+    width: 100%;
+  }
+  main .overlay {
+    background-color: #000000d9;
+    min-height: 160vh;
+    margin-top: 59px;
+  }
+  main .overlay .container {
+    width: 85%;
+  }
+  main .content,
+  main .image {
+    grid-column: span 12;
+    align-items: center;
+    text-align: center;
+  }
+  main .image {
+    width: 100%;
+  }
+  main .content div[class^="d-flex"] {
+    width: 75%;
+  }
+  .main-title p::before {
+    right: 31%;
+  }
+  .main-title p::after {
+    left: 31%;
+  }
+  .OurGames .card-items .card-item {
+    grid-column: span 6;
+  }
+  .OurGames .card-items .card-item.card-item-th {
+    grid-column: span 12;
+  }
+  .WhatWeDo .card-items .card-item-img {
+    grid-column: span 6;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 99px;
+    grid-column: span 6;
+  }
+  .gamer {
+    height: 320px;
+    grid-column: span 6;
+  }
+  .ContactUs div[class="row gap-4"] {
+    flex-direction: column;
+  }
+  footer div[class="row d-grid gap-5"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 640px) {
+  main .content div[class^="d-flex"] {
+    width: 80%;
+  }
+  .main-title p::before {
+    right: 25%;
+  }
+  .main-title p::after {
+    left: 25%;
+  }
+  .OurGames .card-items .card-item,
+  .OurGames .card-items .card-item.card-item-th {
+    grid-column: span 12;
+  }
+  .WhatWeDo .card-items .card-item-img {
+    grid-column: 2/12;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 189px;
+    grid-column: 2/12;
+  }
+  form .user{
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  main .overlay .container {
+    width: 95%;
+  }
+  main .image {
+    width: 90%;
+    margin: auto;
+  }
+  .gamer {
+    grid-column: span 12;
+  }
+  footer div[class="row d-grid gap-5"] {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  main .overlay .container {
+    width: 100%;
+  }
+  main .overlay {
+    margin-top: 58px;
+  }
+  main .overlay .container {
+    width: 100%;
+  }
+  main .content,
+  main .image {
+    width: 85%;
+  }
+  main .content div[class^="d-flex"] {
+    width: 92%;
+  }
+  main .image {
+    grid-column: span 11;
+  }
+  .main-title p::before {
+    right: 22%;
+  }
+  .main-title p::after {
+    left: 22%;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .OurGames .card-items .card-item,
+  .OurGames .card-items .card-item.card-item-th {
+    grid-column: 2/12;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 118px;
+  }
+  .animation img {
+    width: 80px;
+  }
+  .gamer {
+    grid-column: 2/12;
+  }
+}
