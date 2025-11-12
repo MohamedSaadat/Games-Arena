@@ -71,6 +71,7 @@ h2 {
 }
 h4 {
   font-family: "Days One", sans-serif;
+  font-size: 20px;
 }
 p,
 article {
@@ -85,8 +86,8 @@ footer {
 img {
   width: 100%;
 }
-/* ----------------------------------------------------------------- */
-/* classes */
+/* ----------------------------- classes ------------------------------ */
+/* --------------------------- main-title ------------------------------ */
 .main-title {
   text-align: center;
   margin-bottom: 64px;
@@ -126,6 +127,43 @@ img {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
+/* ------------------------- shiny button ----------------------------- */
+.shiny {
+  position: relative;
+  overflow: hidden;
+}
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -55%;
+  width: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: 0.3s ease-in-out;
+}
+.shiny::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: -100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+.shiny:hover::after {
+  left: 105%;
+}
+.shiny:hover::before {
+  left: 0;
+}
 /* ----------------------------------------------------------------- */
 /* font size*/
 .f12 {
@@ -162,6 +200,13 @@ header {
   padding-block: 5px;
   box-shadow: 0 1px 1px 0 #1e2939;
 }
+/* #1 */
+/* .navbar-nav {
+  scroll-target-group: auto;
+  a:target-current{
+    color: var(--yellow);
+  }
+} */
 /* links & button */
 .bell,
 .message {
@@ -171,6 +216,13 @@ header {
 .message:hover {
   color: var(--yellow);
 }
+.navbar .collapse div[class^="d-flex"] {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .collapse div[class^="d-flex"] div[class="d-flex"] {
+    align-items: center;
+  }
 /* navbar-toggler */
 button.navbar-toggler {
   border: none;
@@ -190,6 +242,10 @@ button.navbar-toggler:hover i {
 }
 .nav-item .nav-link.active {
   color: var(--yellow);
+}
+button.shiny {
+  padding: 8px 22px;
+  border: none;
 }
 /* ----------------------------------------------------------------- */
 /* ------------------------- main ------------------------------- */
@@ -213,6 +269,9 @@ main .image {
   grid-column: span 6;
 }
 /* content */
+main .content div[class^="d-flex"] {
+  width: 75%;
+}
 main .content div[class^="d-flex"] .btn:first-child {
   border: 2px solid var(--yellow);
   background-color: var(--yellow);
@@ -224,7 +283,7 @@ main .content div[class^="d-flex"] .btn:last-child {
   color: var(--yellow);
   font-weight: 700;
 }
-main .content div[class^="d-flex"] .btn:last-child:hover{
+main .content div[class^="d-flex"] .btn:last-child:hover {
   background-color: var(--yellow);
   color: var(--black);
 }
@@ -259,6 +318,7 @@ main .image div[class^="position-absolute"] {
 /* card items */
 .OurGames .card-items {
   grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
 }
 .OurGames .card-items .card-item {
   border: 2px solid transparent;
@@ -271,6 +331,9 @@ main .image div[class^="position-absolute"] {
 .OurGames .card-items .card-item img,
 .OurGames .card-items .card-item .text {
   transition: 0.4s ease-in-out;
+}
+.OurGames .card-items .card-item .text {
+  padding: 0 0 16px 24px;
 }
 .OurGames .card-items .card-item:hover {
   border: 2px solid var(--yellow);
@@ -329,6 +392,7 @@ main .image div[class^="position-absolute"] {
 /* card items */
 .WhatWeDo .card-items {
   grid-template-columns: repeat(12, 1fr);
+  gap: 48px;
 }
 .WhatWeDo .card-items .card-item {
   background-color: #1a1a1a;
@@ -449,7 +513,7 @@ main .image div[class^="position-absolute"] {
   }
 }
 /* ----------------------------------------------------------------- */
-/* ------------------------- gamers ----------------------------- */
+/* ------------------------- Our Team ----------------------------- */
 .gamers .row {
   grid-template-columns: repeat(12, 1fr);
 }
@@ -457,6 +521,9 @@ main .image div[class^="position-absolute"] {
   cursor: pointer;
   grid-column: 3 span;
 }
+.gamer img {
+    object-fit: cover;
+  }
 .gamer .text {
   height: 120px;
   box-shadow: inset 0 -115px 20px -10px rgba(0, 0, 0, 0.6);
@@ -561,42 +628,4 @@ footer i:hover {
 }
 .footer {
   border-top: 1px solid #1e2939;
-}
-/* ----------------------------------------------------------------- */
-/* ------------------------- button shiny ----------------------------- */
-.shiny {
-  position: relative;
-  overflow: hidden;
-}
-.shiny::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -55%;
-  width: 50%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.7) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-20deg);
-  transition: .3s ease-in-out;
-}
-.shiny::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  left: -100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: .3s ease-in-out;
-}
-.shiny:hover::after {
-  left: 105%;
-}
-.shiny:hover::before {
-  left: 0;
 }

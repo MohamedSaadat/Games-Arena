@@ -1,6 +1,110 @@
-@media (max-width: 1400px){}
-@media (max-width: 1200px){}
-@media (max-width: 992px){}
-@media (max-width: 768px){}
-@media (max-width: 576px){}
-@media (max-width: 480px){}
+@media (max-width: 1440px) {
+}
+@media (max-width: 1280px) {
+  main .image {
+    width: 535px;
+  }
+  main .content div[class^="d-flex"] {
+    width: 81%;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 52px;
+  }
+  .main-title p::before {
+    right: 38%;
+  }
+  .main-title p::after {
+    left: 38%;
+  }
+}
+@media (max-width: 1200px) {
+  .OurGames .arrows button {
+    width: 67px;
+    height: 65px;
+  }
+  .animation img {
+    width: 90px;
+  }
+  .ContactUs .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  main .image {
+    width: 444px;
+  }
+  main .content div[class^="d-flex"] {
+    width: 95%;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 43px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .main-title p::before {
+    right: 36%;
+  }
+  .main-title p::after {
+    left: 36%;
+  }
+  .OurGames .card-items,
+  .WhatWeDo .card-items {
+    gap: 24px;
+  }
+  .OurGames .card-items p[class="f18 w700 black"] {
+    font-size: 16px;
+  }
+  .OurGames .card-items .card-item .text {
+    padding: 0 0 16px 16px;
+  }
+  .WhatWeDo .card-items .card-item {
+    padding-block: 39px;
+  }
+  .gamer {
+    height: 320px;
+  }
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+  .navbar .collapse div[class^="d-flex"] {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar .collapse .navbar-nav {
+    width: 100%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-block: 16px;
+    padding-block: 16px;
+  }
+  .navbar .collapse div[class^="d-flex"] div[class="d-flex"] {
+    align-items: start;
+    width: 100%;
+    gap: 16px;
+  }
+  .bell::after {
+    content: "Notifications";
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  .message::after {
+    content: "Messages";
+    font-size: 16px;
+    margin-left: 4px;
+  }
+  header button.shiny {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 480px) {
+}
