@@ -173,7 +173,7 @@
     grid-column: 2/12;
   }
   .WhatWeDo .card-items .card-item {
-    padding-block: 189px;
+    padding-block: 143px;
     grid-column: 2/12;
   }
   form .user{
@@ -193,6 +193,7 @@
   }
   footer div[class="row d-grid gap-5"] {
     grid-template-columns: repeat(1, 1fr);
+    padding-inline: 24px;
   }
 }
 @media (max-width: 480px) {
