@@ -118,6 +118,8 @@ You are free to modify, reuse, and build upon it for personal or commercial use.
 If you’d like to collaborate or discuss UI/UX or front-end design:
 
 **Author:** Mohamed Saadat
+
 **Email:** mohamed93saadat@gmail.com
+
 **GitHub:** [https://github.com/MohamedSaadat](https://github.com/MohamedSaadat)
 
