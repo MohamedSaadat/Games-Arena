@@ -61,21 +61,17 @@ The main goal is to create an **intuitive, responsive, and visually appealing us
 ```
 Games-Arena/
 │
-├── index.html # Main landing page with game menu
+├── index.html
 │
-├── /css # Stylesheets for the entire project
-│ └── styles.css # Main CSS file for layout, design, and responsiveness
+├── /css 
+│ └── styles.css 
 │
-├── /images # All visual assets
-│ ├── icons/ # Icons for UI elements
-│ └── games/ # Game-specific images/screenshots
+├── /images 
+│ ├── icons/
+│ └── games/ 
 │
-├── /webfonts # Custom fonts (optional)
-│
-└── /games # Individual HTML files for each game
-├── game1.html
-├── game2.html
-└── ... # Add more games as needed
+└── /webfonts
+
 ```
 
 ## 🎯 Goals
