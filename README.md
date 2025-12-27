@@ -49,8 +49,8 @@ The main goal is to create an **intuitive, responsive, and visually appealing us
 | **HTML5**                     | Structure and semantic content of pages     |
 | **CSS3**                      | Styling, layout, and responsive design      |
 | **Bootstrap**                  | Grid system, UI components, responsive layout |
-| **Custom Fonts** *(optional)* | Enhance visual appearance and branding      |
-| **GitHub Pages** *(optional)* | Hosting the live demo of the project        |
+| **Custom Fonts**               | Enhance visual appearance and branding      |
+| **GitHub Pages**               | Hosting the live demo of the project        |
 | **Icons / Images**             | Enhance UI and improve user experience      |
 | **Shields / Badges**           | Showcase project technologies and status    |
 
